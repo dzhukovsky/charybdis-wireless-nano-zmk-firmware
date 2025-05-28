@@ -1,41 +1,41 @@
 layout: {zmk_keyboard: charybdis}
 layers:
   '0':
-  - ''''
-  - D
-  - U
-  - P
+  - Q
   - W
-  - J
-  - K
-  - Y
+  - E
   - R
-  - ;
-  - ''
-  - ''
-  - ''
-  - ''
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: LGUI}
+  - {t: S, h: LEFT ALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LSHFT}
   - G
   - H
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: J, h: RSHFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: RALT}
+  - {t: ;, h: RGUI}
+  - {t: Z, h: Mouse}
   - X
   - C
   - V
   - B
-  - F
+  - N
   - M
   - ','
   - .
-  - Q
-  - {t: ESC, h: Mouse}
-  - '&mkp MB1'
-  - ''
-  - RSHIFT
-  - Numbers
+  - {t: /, h: Mouse}
+  - {t: ESC, h: Navigation}
+  - {t: SPACE, h: Symbols}
+  - BACK SPACE
+  - TAB
+  - {t: ENTER, h: Numbers}
   Numbers:
   - ''
   - '7'
@@ -103,13 +103,47 @@ layers:
   - F10
   - F11
   - DEV TOOLS
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  Navigation:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - HOME
+  - UP
+  - END
+  - PG UP
+  - LALT
+  - LGUI
+  - LCTRL
+  - LSHFT
+  - ''
+  - TAB
+  - LEFT
+  - DOWN
+  - RIGHT
+  - PG DN
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ENTER
+  - BSPC
+  - DEL
+  - APP
+  - ''
   - {type: held}
   - ''
   - ''
   - ''
-  - {type: held}
-  Navigation: ['', '', '', '', '', '', HOME, UP, END, PG UP, LALT, LGUI, LCTRL, LSHFT, '', TAB, LEFT, DOWN, RIGHT, PG DN, '', '', '', '', '', ENTER, BSPC, DEL, APP,
-    '', '', '', '', '', Symbols]
+  - Symbols
   Mouse:
   - ''
   - BACK
@@ -131,7 +165,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - {type: held}
   - '&mkp MB2'
   - ''
   - '&mkp MB1'
@@ -141,7 +175,7 @@ layers:
   - ''
   - ''
   - ''
-  - {type: held}
+  - ''
   - ''
   - ''
   - ''

@@ -172,10 +172,10 @@
 
         BASE {
             bindings = <
-  &kp SQT  &kp D  &kp U      &kp P     &kp W    &kp J       &kp K  &kp Y      &kp R    &kp SEMI
-  &none    &none  &none      &none     &kp G    &kp H       &none  &none      &none    &none
-  &none    &kp X  &kp C      &kp V     &kp B    &kp F       &kp M  &kp COMMA  &kp DOT  &kp Q
-                  &lt 4 ESC  &mkp MB1  &none    &kp RSHIFT  &mo 1
+  &kp Q       &kp W           &kp E        &kp R        &kp T            &kp Y    &kp U        &kp I        &kp O       &kp P
+  &hl LGUI A  &hl LEFT_ALT S  &hl LCTRL D  &hl LSHFT F  &kp G            &kp H    &hr RSHFT J  &hr RCTRL K  &hr RALT L  &hr RGUI SEMICOLON
+  &lt 4 Z     &kp X           &kp C        &kp V        &kp B            &kp N    &kp M        &kp COMMA    &kp DOT     &lt 4 SLASH
+                              &lt 3 ESC    &lt 2 SPACE  &kp BACKSPACE    &kp TAB  &lt 1 ENTER
             >;
         };
 
