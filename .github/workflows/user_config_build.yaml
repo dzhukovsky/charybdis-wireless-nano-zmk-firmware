@@ -245,6 +245,7 @@ jobs:
         uses: actions/upload-artifact/merge@v4
         with:
           pattern: artifact-*
+          name: firmware
           delete-merged: true
 
       - name: Delete keymap artifacts
