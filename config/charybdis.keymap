@@ -8,6 +8,12 @@
 // #include "behaviors.dtsi"
 // #include "combos.dtsi"
 
+&lt {
+    hold-trigger-on-release;
+    hold-while-undecided;
+    hold-while-undecided-linger;
+};
+
 / {
     /* input config for mouse move mode */
 
@@ -76,178 +82,53 @@
     };
 
     behaviors {
-        hm_right: homerow_mod_right {
+        hl: homewrow_mods_left {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-
-            // quick-tap-ms = <200>;
-            // require-prior-idle-ms = <150>;
-
+            label = "HOMEROW_MODS_LEFT_HAND";
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <0 1 2 3 4 12 13 14 24 36 37 38 11 10 10 11 13 14 20 21 22 23 24>;
-            hold-while-undecided;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            hold-trigger-on-release;
-        };
-
-        hm_left: homerow_mod_left {
-            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-
-            // quick-tap-ms = <200>;
-            // require-prior-idle-ms = <150>;
-
-            bindings = <&kp>, <&kp>;
-
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            hold-while-undecided;
-            hold-trigger-on-release;
-        };
-
-        mkp_kp: mkp_kp {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-            bindings = <&mkp>, <&kp>;
-
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            hold-while-undecided;
-            hold-trigger-on-release;
-            label = "MKP_KP";
-        };
-
-        hm_lay: hm_lay {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-            bindings = <&mo>, <&kp>;
-
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
             hold-while-undecided;
             hold-while-undecided-linger;
-            label = "HM_LAY";
+            hold-trigger-on-release;
         };
 
-        hm_rgui: hm_rgui {
+        hr: homewrow_mods_right {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
+            label = "HOMEROW_MODS_RIGHT_HAND";
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <0 1 2 3 4 12 13 14 24 36 37 38 11 10 10 11 13 14 20 21 22 23 24>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            hold-trigger-on-release;
-            label = "HM_RGUI";
-        };
-
-        hm_lgui: hm_lgui {
-            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-            bindings = <&kp>, <&kp>;
-
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-while-undecided;
+            hold-while-undecided-linger;
             hold-trigger-on-release;
-            label = "HM_LGUI";
         };
     };
 
     macros {
-        ENDASH: ENDASH {
+        vs_def: vs_def {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N0>,
-                <&macro_release>,
-                <&kp LALT>;
-
-            label = "ENDASH";
-            wait-ms = <30>;
-            tap-ms = <30>;
+            bindings = <&mkp LCLK &kp F12>;
+            label = "VS_DEF";
         };
 
-        EMDASH: EMDASH {
+        vs_impl: vs_impl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N1>,
-                <&macro_release>,
-                <&kp LALT>;
-
-            label = "EMDASH";
-            wait-ms = <30>;
-            tap-ms = <30>;
+            bindings = <&mkp LCLK &kp LC(F12)>;
+            label = "VS_IMPL";
         };
 
-        SUPER2: SUPER2 {
+        vs_refs: vs_refs {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N2 &kp KP_N5 &kp KP_N3>,
-                <&macro_release>,
-                <&kp LALT>;
-
-            label = "SUPER2";
-            wait-ms = <30>;
-            tap-ms = <30>;
-        };
-
-        SUPER3: SUPER3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N9>,
-                <&macro_release>,
-                <&kp LALT>;
-
-            label = "SUPER3";
-            wait-ms = <30>;
-            tap-ms = <30>;
-        };
-
-        DEG: DEG {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6>,
-                <&macro_release>,
-                <&kp LALT>;
-
-            label = "DEG";
-            wait-ms = <30>;
-            tap-ms = <30>;
+            bindings = <&mkp LCLK &kp LC(K) &kp R>;
+            label = "VS_REFS";
         };
     };
 
@@ -270,74 +151,19 @@
     combos {
         compatible = "zmk,combos";
 
-        LBRACKER {
-            bindings = <&kp RA(N8)>;
-            key-positions = <6 7>;
-            layers = <2>;
-        };
-
-        RBRACKET {
-            bindings = <&kp RA(N9)>;
-            key-positions = <7 8>;
-            layers = <2>;
-        };
-
-        LESSTHAN {
-            bindings = <&kp NON_US_BSLH>;
-            key-positions = <16 17>;
-            layers = <2>;
-        };
-
-        MORETHAN {
-            bindings = <&kp LS(NON_US_BSLH)>;
-            key-positions = <17 18>;
-            layers = <2>;
-        };
-
-        LBRACE {
-            bindings = <&kp RA(N7)>;
-            key-positions = <26 27>;
-            layers = <2>;
-        };
-
-        RBRACE {
-            bindings = <&kp RA(N0)>;
-            key-positions = <27 28>;
-        };
-
-        ENDASH {
-            bindings = <&ENDASH>;
-            key-positions = <18 19>;
-            layers = <2>;
-        };
-
-        EMDASH {
-            bindings = <&ENDASH>;
-            key-positions = <18 19 17>;
-            layers = <2>;
-        };
-
-        CAPSWORD {
+        combo_capsword {
             bindings = <&caps_word>;
-            key-positions = <14 15>;
+            key-positions = <2 7>;
         };
 
-        SUPER2 {
-            bindings = <&SUPER2>;
-            key-positions = <21 22>;
-            layers = <2>;
+        combo_capslock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <1 8>;
         };
 
-        SUPER3 {
-            bindings = <&SUPER3>;
-            key-positions = <23 22>;
-            layers = <2>;
-        };
-
-        DEG {
-            bindings = <&DEG>;
-            key-positions = <14 13>;
-            layers = <2>;
+        combo_lang {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <13 12>;
         };
     };
 
@@ -346,41 +172,41 @@
 
         BASE {
             bindings = <
-  &kp SQT          &kp D            &kp U             &kp P              &kp W              &kp J       &kp K              &kp Y              &kp R            &kp SEMI
-  &hm_lgui LALT A  &hm_lgui LGUI S  &hm_left LCTRL E  &hm_left LSHIFT T  &kp G              &kp H       &hm_right RSHFT N  &hm_right RCTRL I  &hm_rgui RGUI L  &hm_rgui LALT O
-  &hm_lay 5 Z      &kp X            &kp C             &kp V              &kp B              &kp F       &kp M              &kp COMMA          &kp DOT          &kp Q
-                                    &lt 1 ESC         &mkp MB1           &hm_lay 4 SPACE    &kp RSHIFT  &mo 2
+  &kp SQT  &kp D  &kp U      &kp P     &kp W    &kp J       &kp K  &kp Y      &kp R    &kp SEMI
+  &none    &none  &none      &none     &kp G    &kp H       &none  &none      &none    &none
+  &none    &kp X  &kp C      &kp V     &kp B    &kp F       &kp M  &kp COMMA  &kp DOT  &kp Q
+                  &lt 4 ESC  &mkp MB1  &none    &kp RSHIFT  &mo 1
             >;
         };
 
-        NAVI {
+        Numbers {
+            bindings = <
+  &none              &kp N7  &kp N8        &kp N9  &kp PRCNT    &kp LS(NUMBER_6)   &kp LS(N7)     &kp LS(N8)        &kp LS(N9)     &kp LS(N0)
+  &kp LS(BACKSLASH)  &kp N4  &kp N5        &kp N6  &kp N0       &kp EQUAL          &none          &none             &none          &none
+  &kp COMMA          &kp N1  &kp N2        &kp N3  &none        &kp RIGHT_BRACKET  &kp RA(MINUS)  &kp RA(NUMBER_2)  &kp LS(SLASH)  &none
+                             &lt 2 PERIOD  &none   &kp ENTER    &none              &none
+            >;
+        };
+
+        Symbols {
+            bindings = <
+  &none     &none     &kp C_PP   &none      &none    &none       &kp F1  &kp F2   &kp F3   &kp F4
+  &kp LALT  &kp LGUI  &kp LCTRL  &kp LSHFT  &none    &kp CAPS    &kp F5  &kp F6   &kp F7   &kp F8
+  &none     &none     &none      &none      &none    &kp KP_NUM  &kp F9  &kp F10  &kp F11  &kp F12
+                      &none      &none      &none    &none       &none
+            >;
+        };
+
+        Navigation {
             bindings = <
   &none     &none     &none      &none      &none    &none      &kp HOME        &kp UP    &kp END    &kp PG_UP
   &kp LALT  &kp LGUI  &kp LCTRL  &kp LSHFT  &none    &kp TAB    &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &kp PG_DN
   &none     &none     &none      &none      &none    &kp ENTER  &kp BSPC        &kp DEL   &kp K_APP  &none
-                      &none      &none      &none    &none      &mo 3
+                      &none      &none      &none    &none      &mo 2
             >;
         };
 
-        NUM_SYM {
-            bindings = <
-  &none              &kp N7  &kp N8        &kp N9  &kp PRCNT    &kp LS(NUMBER_6)   &kp LS(N7)            &kp LS(N8)                 &kp LS(N9)            &kp LS(N0)
-  &kp LS(BACKSLASH)  &kp N4  &kp N5        &kp N6  &kp N0       &kp EQUAL          &hm_right RSHFT EXCL  &hm_right RCTRL LS(MINUS)  &hm_right RGUI SLASH  &hm_right LEFT_ALT BACKSLASH
-  &kp COMMA          &kp N1  &kp N2        &kp N3  &none        &kp RIGHT_BRACKET  &kp RA(MINUS)         &kp RA(NUMBER_2)           &kp LS(SLASH)         &none
-                             &lt 3 PERIOD  &none   &kp ENTER    &none              &none
-            >;
-        };
-
-        FUNC {
-            bindings = <
-  &none     &hm_left C_RW C_PREV  &kp C_PP   &hm_left C_FF C_NEXT  &none    &none       &kp F1  &kp F2   &kp F3   &kp F4
-  &kp LALT  &kp LGUI              &kp LCTRL  &kp LSHFT             &none    &kp CAPS    &kp F5  &kp F6   &kp F7   &kp F8
-  &none     &none                 &none      &none                 &none    &kp KP_NUM  &kp F9  &kp F10  &kp F11  &kp F12
-                                  &none      &none                 &none    &none       &none
-            >;
-        };
-
-        MOUSE {
+        Mouse {
             bindings = <
   &none  &mkp MB4  &none     &mkp MB5  &none    &none  &none  &none  &none  &none
   &none  &none     &mkp MB3  &none     &none    &none  &none  &none  &none  &none
@@ -389,7 +215,16 @@
             >;
         };
 
-        SNIPE {
+        Snipe {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans
+            >;
+        };
+
+        Drag {
             bindings = <
   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
@@ -399,12 +234,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        FUNC {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };

@@ -11,17 +11,17 @@ layers:
   - Y
   - R
   - ;
-  - {t: A, h: LALT}
-  - {t: S, h: LGUI}
-  - {t: E, h: LCTRL}
-  - {t: T, h: LSHIFT}
+  - ''
+  - ''
+  - ''
+  - ''
   - G
   - H
-  - {t: N, h: RSHFT}
-  - {t: I, h: RCTRL}
-  - {t: L, h: RGUI}
-  - {t: O, h: LALT}
-  - {t: Z, h: SNIPE}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - X
   - C
   - V
@@ -31,48 +31,12 @@ layers:
   - ','
   - .
   - Q
-  - {t: ESC, h: '1'}
+  - {t: ESC, h: Mouse}
   - '&mkp MB1'
-  - {t: SPACE, h: '3'}
+  - ''
   - RSHIFT
-  - '2'
-  '1':
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - HOME
-  - UP
-  - END
-  - PG UP
-  - LALT
-  - LGUI
-  - LCTRL
-  - LSHFT
-  - ''
-  - TAB
-  - LEFT
-  - DOWN
-  - RIGHT
-  - PG DN
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ENTER
-  - BSPC
-  - DEL
-  - APP
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - ''
-  - '4'
-  '2':
+  - Numbers
+  Numbers:
   - ''
   - '7'
   - '8'
@@ -89,10 +53,10 @@ layers:
   - '6'
   - '0'
   - '='
-  - {t: '!', h: RSHFT}
-  - {t: Sft+ -, h: RCTRL}
-  - {t: /, h: RGUI}
-  - {t: \, h: LEFT ALT}
+  - ''
+  - ''
+  - ''
+  - ''
   - ','
   - '1'
   - '2'
@@ -103,16 +67,16 @@ layers:
   - AGr+ 2
   - Sft+ /
   - ''
-  - {t: ., h: '4'}
+  - {t: ., h: Symbols}
   - ''
   - ENTER
   - ''
   - {type: held}
-  '4':
+  Symbols:
   - ''
-  - {t: PREV, h: RW}
+  - ''
   - PP
-  - {t: NEXT, h: FF}
+  - ''
   - ''
   - ''
   - F1
@@ -144,7 +108,9 @@ layers:
   - ''
   - ''
   - {type: held}
-  '3':
+  Navigation: ['', '', '', '', '', '', HOME, UP, END, PG UP, LALT, LGUI, LCTRL, LSHFT, '', TAB, LEFT, DOWN, RIGHT, PG DN, '', '', '', '', '', ENTER, BSPC, DEL, APP,
+    '', '', '', '', '', Symbols]
+  Mouse:
   - ''
   - BACK
   - ''
@@ -175,12 +141,12 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
   - {type: held}
   - ''
   - ''
-  SNIPE:
+  - ''
+  - ''
+  Snipe:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -201,7 +167,43 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Drag:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -217,37 +219,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [6, 7]
-  k: AGr+ 8
-  l: ['2']
-- p: [7, 8]
-  k: AGr+ 9
-  l: ['2']
-- p: [16, 17]
-  k: '|'
-  l: ['2']
-- p: [17, 18]
-  k: Sft+ |
-  l: ['2']
-- p: [26, 27]
-  k: AGr+ 7
-  l: ['2']
-- p: [27, 28]
-  k: AGr+ 0
-- p: [18, 19]
-  k: '&ENDASH'
-  l: ['2']
-- p: [18, 19, 17]
-  k: '&ENDASH'
-  l: ['2']
-- p: [14, 15]
+- p: [2, 7]
   k: CAPS WORD
-- p: [21, 22]
-  k: '&SUPER2'
-  l: ['2']
-- p: [23, 22]
-  k: '&SUPER3'
-  l: ['2']
-- p: [14, 13]
-  k: '&DEG'
-  l: ['2']
+- p: [1, 8]
+  k: CAPSLOCK
+- p: [13, 12]
+  k: Gui+ SPACE
