@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: charybdis}
 layers:
-  '0':
+  Base:
   - Q
   - W
   - E
@@ -38,76 +38,76 @@ layers:
   - {t: ENTER, h: Numbers}
   Numbers:
   - ''
+  - F7
+  - F8
+  - F9
+  - DEV TOOLS
+  - ''
   - '7'
   - '8'
   - '9'
-  - '%'
-  - Sft+ 6
-  - Sft+ 7
-  - Sft+ 8
-  - Sft+ 9
-  - Sft+ 0
-  - Sft+ \
-  - '4'
-  - '5'
-  - '6'
-  - '0'
-  - '='
   - ''
+  - LGUI
+  - {t: F4, h: LALT}
+  - {t: F5, h: LCTRL}
+  - {t: F6, h: LSHFT}
+  - F11
   - ''
-  - ''
-  - ''
-  - ','
-  - '1'
-  - '2'
-  - '3'
-  - ''
-  - ']'
-  - AGr+ -
-  - AGr+ 2
-  - Sft+ /
-  - ''
-  - {t: ., h: Symbols}
-  - ''
-  - ENTER
-  - ''
-  - {type: held}
-  Symbols:
-  - ''
-  - ''
-  - PP
-  - ''
-  - ''
+  - {t: '4', h: RSHFT}
+  - {t: '5', h: RCTRL}
+  - {t: '6', h: RALT}
+  - RGUI
   - ''
   - F1
   - F2
   - F3
-  - F4
-  - LALT
-  - LGUI
-  - LCTRL
-  - LSHFT
-  - ''
-  - CAPS
-  - F5
-  - F6
-  - F7
-  - F8
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - KP NUM
-  - F9
   - F10
-  - F11
-  - DEV TOOLS
+  - ''
+  - '1'
+  - '2'
+  - '3'
+  - '0'
+  - ''
+  - ''
+  - DEL
+  - ''
+  - {type: held}
+  Symbols:
+  - ''
+  - '{'
+  - '}'
+  - '`'
+  - ''
+  - ''
+  - '&'
+  - '*'
+  - +
+  - '~'
+  - '|'
+  - (
+  - )
+  - ''''
+  - ''
+  - ''
+  - $
+  - '%'
+  - ^
+  - '-'
+  - \
+  - '['
+  - ']'
+  - '"'
+  - ''
+  - ''
+  - '!'
+  - '@'
+  - '#'
+  - _
   - ''
   - {type: held}
   - ''
   - ''
-  - ''
+  - '='
   Navigation:
   - ''
   - ''
@@ -115,50 +115,50 @@ layers:
   - ''
   - ''
   - ''
-  - HOME
-  - UP
-  - END
-  - PG UP
-  - LALT
-  - LGUI
-  - LCTRL
-  - LSHFT
   - ''
-  - TAB
+  - ''
+  - ''
+  - ''
   - LEFT
+  - UP
   - DOWN
   - RIGHT
+  - ''
+  - ''
+  - RSHFT
+  - RCTRL
+  - RALT
+  - RGUI
+  - HOME
+  - PG UP
   - PG DN
+  - END
   - ''
   - ''
   - ''
   - ''
   - ''
-  - ENTER
-  - BSPC
-  - DEL
-  - APP
   - ''
   - {type: held}
   - ''
-  - ''
-  - ''
-  - Symbols
-  Mouse:
   - ''
   - BACK
-  - ''
-  - FWD
-  - ''
-  - ''
+  - FORWARD
+  Mouse:
   - ''
   - ''
   - ''
   - ''
   - ''
   - ''
-  - '&mkp MB3'
   - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&vs_def'
+  - '&vs_impl'
+  - '&vs_refs'
   - ''
   - ''
   - ''
@@ -166,20 +166,20 @@ layers:
   - ''
   - ''
   - {type: held}
-  - '&mkp MB2'
-  - ''
-  - '&mkp MB1'
-  - ''
+  - Snipe
+  - Drag
   - ''
   - ''
   - ''
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - R CLK
+  - L CLK
+  - Mid CLK
+  - Mid CLK
+  - L CLK
   Snipe:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -201,8 +201,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -237,9 +237,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
