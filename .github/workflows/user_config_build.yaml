@@ -244,8 +244,7 @@ jobs:
         continue-on-error: true
         uses: actions/upload-artifact/merge@v4
         with:
-          pattern: artifact-charybdis_qwerty_{left,right}
-          name: firmware-charybdis-qwerty
+          pattern: artifact-*
           delete-merged: true
 
       - name: Delete keymap artifacts
