@@ -263,5 +263,5 @@ combos:
   k: {t: BT, h: '1'}
 - p: [7, 6]
   k: {t: BT, h: '2'}
-- p: [2, 7, 6, 3]
+- p: [9, 8]
   k: BT CLR ALL
