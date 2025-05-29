@@ -257,11 +257,9 @@ combos:
   k: CAPS WORD
 - p: [1, 8]
   k: CAPSLOCK
-- p: [13, 12]
-  k: Gui+ SPACE
-- p: [2, 3]
+- p: [23, 24]
   k: {t: BT, h: '1'}
-- p: [7, 6]
+- p: [25, 26]
   k: {t: BT, h: '2'}
-- p: [9, 8]
+- p: [23, 24, 25, 26]
   k: BT CLR ALL
