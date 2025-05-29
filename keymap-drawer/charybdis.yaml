@@ -142,8 +142,8 @@ layers:
   - {type: held}
   - ''
   - ''
-  - BACK
-  - FORWARD
+  - ''
+  - ''
   Mouse:
   - ''
   - ''
@@ -175,11 +175,11 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - R CLK
-  - L CLK
-  - Mid CLK
-  - Mid CLK
-  - L CLK
+  - '&mkp MB2'
+  - '&mkp MB1'
+  - '&mkp MB3'
+  - BACK
+  - FWD
   Snipe:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -259,3 +259,9 @@ combos:
   k: CAPSLOCK
 - p: [13, 12]
   k: Gui+ SPACE
+- p: [2, 3]
+  k: {t: BT, h: '1'}
+- p: [7, 6]
+  k: {t: BT, h: '2'}
+- p: [2, 7, 6, 3]
+  k: BT CLR ALL
