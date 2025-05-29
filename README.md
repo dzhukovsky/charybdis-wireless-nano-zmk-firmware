@@ -52,15 +52,6 @@ The base layer uses [home row mods](https://precondition.github.io/home-row-mods
 
 Review the layer maps below to see how each one functions. Then either modify the keymap to fit your needs, or start using these defaults to become more familiar with them.
 
-Here are a few tips for a quick start:
-
-- The bluetooth keys on the EXTRAS layer allow you to select which bluetooth pairing you want, BT-CLR clears the pairing on the selected profile.
-
-- The left most thumb button has multiple functions
-  - When held, the function of the trackball is changed from moving the cursor to scrolling.
-  - When double tapped and held, it will reduce the cursor speed for more precision.
-  - When single tapped it outputs the escape key.
-
 ![keymap images](keymap-drawer/charybdis.svg)
 
 ## Modify Key Mappings
