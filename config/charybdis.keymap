@@ -38,23 +38,16 @@
 
     /* input config for mouse scroll mode */
 
-    trackball_scroll_listener_vert {
+    trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <6>;
+        layers = <drg>;
         evt-type = <INPUT_EV_REL>;
-        y-input-code = <INPUT_REL_WHEEL>;  // vertical scroll
+        x-input-code = <INPUT_REL_MISC>;
+        y-input-code = <INPUT_REL_WHEEL>;
+        scale-divisor = <6>;
         y-invert;
-        bindings = <&ib_wheel_scaler 1 8>;  // vertical scroll speed
-    };
-
-    trackball_scroll_listener_horiz {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
-        layers = <6>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_HWHEEL>;  // horizontal scroll
-        bindings = <&ib_wheel_scaler 1 4>;  // horizontal scroll speed
+        bindings = <&ib_wheel_scaler 1 8>;
     };
 
     /* define a resolution down scaler only for INPUT_REL_WHEEL */
