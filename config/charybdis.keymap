@@ -45,7 +45,7 @@
         y-input-code = <INPUT_REL_WHEEL>;
         scale-divisor = <6>;
         y-invert;
-        bindings = <&ib_wheel_scaler 1 8>;
+        bindings = <&ib_wheel_scaler -1 8>;
     };
 
     /* define a resolution down scaler only for INPUT_REL_WHEEL */
