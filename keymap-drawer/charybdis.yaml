@@ -263,3 +263,5 @@ combos:
   k: {t: BT, h: '2'}
 - p: [23, 24, 25, 26]
   k: BT CLR ALL
+- p: [12, 13]
+  k: Gui+ SPACE

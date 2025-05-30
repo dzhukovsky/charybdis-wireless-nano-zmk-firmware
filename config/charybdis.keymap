@@ -138,6 +138,11 @@
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <23 24 25 26>;
         };
+
+        combo_lang {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <12 13>;
+        };
     };
 
     keymap {
