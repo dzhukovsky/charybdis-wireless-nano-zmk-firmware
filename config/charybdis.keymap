@@ -64,6 +64,7 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-on-release;
+            hold-trigger-key-positions = <5 25 15 33 34 26 16 17 28 18 27 29 19 8 9 7 6>;
         };
 
         hr: homewrow_mods_right {
@@ -75,6 +76,7 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-on-release;
+            hold-trigger-key-positions = <0 10 20 22 21 11 2 1 12 13 3 4 14 24 30 23 31 32>;
         };
     };
 
