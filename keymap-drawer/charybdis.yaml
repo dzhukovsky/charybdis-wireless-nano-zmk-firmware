@@ -47,16 +47,16 @@ layers:
   - '8'
   - '9'
   - ''
-  - LGUI
-  - {t: F4, h: LALT}
-  - {t: F5, h: LCTRL}
-  - {t: F6, h: LSHFT}
+  - ''
+  - F4
+  - F5
+  - F6
   - F11
   - ''
-  - {t: '4', h: RSHFT}
-  - {t: '5', h: RCTRL}
-  - {t: '6', h: RALT}
-  - RGUI
+  - '4'
+  - '5'
+  - '6'
+  - ''
   - ''
   - F1
   - F2
@@ -161,10 +161,10 @@ layers:
   - '&vs_refs'
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - RSHFT
+  - RCTRL
+  - RALT
+  - RGUI
   - {type: held}
   - Snipe
   - Drag
