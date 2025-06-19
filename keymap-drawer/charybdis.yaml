@@ -156,15 +156,15 @@ layers:
   - ''
   - ''
   - ''
+  - LALT
+  - LCTRL
+  - LSHFT
+  - ''
+  - ''
   - '&vs_def'
   - '&vs_impl'
   - '&vs_refs'
   - ''
-  - ''
-  - RSHFT
-  - RCTRL
-  - RALT
-  - RGUI
   - {type: held}
   - Snipe
   - Drag
