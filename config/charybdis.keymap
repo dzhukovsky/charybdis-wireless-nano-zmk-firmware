@@ -34,7 +34,7 @@
 
     /* input config for mouse vertical scroll mode */
 
-    trackball_scroll_listener {
+    trackball_y_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
         layers = <6>;
@@ -47,7 +47,7 @@
 
     /* input config for mouse horizontal scroll mode */
 
-    trackball_scroll_listener {
+    trackball_x_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
         layers = <7>;
