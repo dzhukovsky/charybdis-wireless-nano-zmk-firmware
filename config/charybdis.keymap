@@ -32,7 +32,7 @@
         scale-divisor = <12>;
     };
 
-    /* input config for mouse scroll mode */
+    /* input config for mouse vertical scroll mode */
 
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
@@ -41,6 +41,19 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
+        scale-divisor = <6>;
+        bindings = <&ib_wheel_scaler 1 8>;
+    };
+
+    /* input config for mouse horizontal scroll mode */
+
+    trackball_scroll_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball>;
+        layers = <7>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_WHEEL>;
+        y-input-code = <INPUT_REL_MISC>;
         scale-divisor = <6>;
         bindings = <&ib_wheel_scaler 1 8>;
     };
