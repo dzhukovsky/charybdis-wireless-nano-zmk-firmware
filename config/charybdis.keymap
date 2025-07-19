@@ -188,7 +188,7 @@
             bindings = <
   &none   &none     &none      &none      &none       &none     &none     &none     &none     &none
   &none   &kp LALT  &kp LCTRL  &kp LSHFT  &none       &none     &vs_def   &vs_impl  &vs_refs  &none
-  &trans  &mo 5     &mo 6      &none      &none       &none     &none     &none     &none     &trans
+  &trans  &mo 5     &mo 6      &mo 7      &none       &none     &none     &none     &none     &trans
                     &mkp MB2   &mkp MB1   &mkp MB3    &mkp MB4  &mkp MB5
             >;
         };
@@ -202,7 +202,16 @@
             >;
         };
 
-        Drag {
+        DragV {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans
+            >;
+        };
+
+        DragH {
             bindings = <
   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
